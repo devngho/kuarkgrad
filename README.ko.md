@@ -27,9 +27,9 @@ println(f.evaluate(x to 2).toStringExpanded()) // 15
 println(df.evaluate(x to 2).toStringExpanded()) // 11
 ```
 
-### forward-mode automatic differentiation
+### forward-mode 자동 미분
 
-`evaluateWithDerivative`는 `derivative`와 달리 도함수의 그래프를 만들지 않고, 한 번의 계산으로 값과 미분값을 함께 구합니다.
+`evaluateWithDerivative`는 `derivative`와 달리 도함수의 그래프를 만들지 않고, 한 번의 계산으로 값과 미분값을 함께 구할 수 있습니다.
 
 ```kt
 val (value, derivative) = f.evaluateWithDerivative(x, x to 2) // 15, 11
